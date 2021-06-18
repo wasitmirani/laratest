@@ -1,73 +1,65 @@
-@extends('layouts.app')
+
+
+@extends('layouts.frontend.authmaster')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+  <!--Register Form-->
+  <section class="main-register">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="img-box">
+                    <img src="{{asset('/frontend/assets/images/form-sdie-img.jpg')}}" class="img-fluid" alt="">
+                    <div class="overlay">
+                        <h3>Welcome To</h3>
+                        <h2>Maui Rental <strong>Locators</strong> </h2>
+                        <p>Grursus mal suada faci lisis Lorem ipsum dolarorit more ametion consectetur elit. Vesti at bulum nec odio aea the dumm ipsumm ipsum that dolocons rsus mal suada and fadolorit to the dummy consectetur elit the Lorem Ipsum genera.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="col-lg-5 dis-flex">
+                <form action="{{route('login')}}" method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <label for="first-name">
+                            Email Address</label>
+                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            @error('email')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        </div>
+
+
+                        <div class="col-12">
+                            <label for="first-name">
+                            Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                            @error('password')
+                            <span class="text-danger" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
+                        </div>
+
+                        <div class="col-12 mt-5">
+                            <button type="submit" class="btn btn-business w-100">Login</button>
+                        </div>
+                          <div class="col-12 text-center mt-3">
+                            <a class="btn" href="{{route('register')}}">Register New Account </a>
+                            <a class="btn" href="#">Or Continue With <img src="{{asset('/frontend/assets/images/google.png')}}" class="img-fluid ml-2"></a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
+</section>
+<!--Register Form-->
+
 @endsection
