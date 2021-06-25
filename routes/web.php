@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PackageController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,4 +53,35 @@ Route::middleware(['auth'])->prefix('member')->name('member.')->group(function (
         Route::post('/update/profile',[MemberController::class,'updateProfile'])->name('update.profile');
 
 });
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+
+        Route::get('/dashboard',[App\Http\Controllers\Admin\DashboardController::class,'index'])->name('dashboard');
+
+        //USERS
+        Route::get('/users',[App\Http\Controllers\Admin\UserController::class,'index'])->name('users');
+        Route::get('/users/create',[App\Http\Controllers\Admin\UserController::class,'create'])->name('users.create');
+        Route::post('/users/delete/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.delete');
+        Route::get('/users/edit/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.edit');
+        Route::post('/users/update/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.update');
+
+        //BOOKKINGS
+        Route::get('/bookings',[App\Http\Controllers\Admin\BookingsController::class,'index'])->name('bookings');
+        Route::get('/bookings/create',[App\Http\Controllers\Admin\BookingsController::class,'create'])->name('bookings.create');
+        Route::post('/bookings',[App\Http\Controllers\Admin\BookingsController::class,'store'])->name('bookings.store');
+        Route::post('/bookings/delete/{id}',[App\Http\Controllers\Admin\BookingsController::class,'delete'])->name('bookings.delete');
+        Route::get('/bookingss/edit/{id}',[App\Http\Controllers\Admin\BookingsController::class,'edit'])->name('bookings.edit');
+        Route::post('/bookings/update/{id}',[App\Http\Controllers\Admin\BookingsController::class,'update'])->name('bookings.update');
+        Route::post('/update/bookings/status',[App\Http\Controllers\Admin\BookingsController::class,'updateBookingStatus'])->name('update.booking.status');
+
+        //Tours
+        Route::get('/Tours',[App\Http\Controllers\Admin\ToursController::class,'index'])->name('Tours');
+        Route::get('/Tours/create',[App\Http\Controllers\Admin\ToursController::class,'create'])->name('Tours.create');
+        Route::post('/Tours',[App\Http\Controllers\Admin\ToursController::class,'store'])->name('Tours.store');
+        Route::post('/Tours/delete/{id}',[App\Http\Controllers\Admin\ToursController::class,'delete'])->name('Tours.delete');
+        Route::get('/Tours/edit/{id}',[App\Http\Controllers\Admin\ToursController::class,'edit'])->name('Tours.edit');
+        Route::post('/Tours/update/{id}',[App\Http\Controllers\Admin\ToursController::class,'update'])->name('Tours.update');
+
+
+});
+
 

@@ -60,9 +60,17 @@
 
 
                             </li>
+                            @if(Auth::user()->role_id == 1)
                             <li class="list-inline-item">
                                 <a   href="{{ route('member.dashboard') }}" role="button"  >{{Auth::user()->name}}</a>
                             </li>
+                            @endif
+                            @if (Auth::user()->role_id == 2)
+                            <li class="list-inline-item">
+                                <a   href="{{route('admin.dashboard')}}" role="button"  >Admin Dashboard</a>
+                            </li>
+
+                            @endif
                         @endguest
 							<li class="list-inline-item"><a href="#" ><img src="{{asset('/frontend/assets/images/flag.png')}}" class="mr-2" alt="">EN</a></li>
 
