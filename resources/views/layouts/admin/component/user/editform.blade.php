@@ -4,14 +4,14 @@
     <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12">
     <div class="form-group">
-    <input type="text" name="name"  id="name"  class="form-control" placeholder="Name *">
+    <input type="text" name="name"  id="name"  class="form-control" placeholder="Name *" value={{$user->name}}>
     </div>
     </div>
 
 
     <div class="col-md-4 col-sm-12">
     <div class="form-group">
-    <input type="text" name="email" id="email" class="form-control" placeholder="Email ID *">
+    <input type="text" name="email" id="email" class="form-control" placeholder="Email ID *" value={{$user->email}}>
     </div>
     </div>
 
@@ -29,8 +29,8 @@
     <hr class="mt-4">
 
 
-    <button type="button" class="btn btn-primary" id="addUserBtn">Add</button>
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+    <button type="button" data-id="{{$user->id}}" class="btn btn-primary" id="editUserBtn">Update</button>
+
     </div>
     </div>
     </div>
