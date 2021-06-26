@@ -1,0 +1,89 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Models\Location;
+use App\Models\BookingTour;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class LocationController extends Controller
+{
+    public function index(){
+
+        $locations = Location::orderby('id','desc')->get();
+
+        return view('admin.pages.location.locations',['locations'=>$locations]);
+
+    }
+
+    public function create(){
+
+
+
+    }
+    public function store(Request $request){
+
+
+
+    }
+    public function edit($id){
+
+        $location = Location::where('id',$id)->first();
+
+        return view('admin.pages.locations.add',['location'=>$location]);
+
+
+
+    }
+    public function update(Request $request, $id){
+
+        $booking = BookingTour::where('id',$id)->first();
+
+        $booking->location_id = $request->location;
+        $booking->booking_date = $request->booking_date;
+        $booking->start_booking_date = $request->start_date;
+        $booking->end_booking_date = $request->end_date;
+        $updated = $booking->save();
+
+        if($updated){
+            return response()->json($updated);
+        }else{
+            return response()->json('0');
+        }
+
+
+
+    }
+    public function delete($id){
+
+        $booking = BookingTour::where('id',$id)->first();
+        if($booking->delete()){
+
+            return response()->json('1');
+        }else{
+            return response()->json(0);
+        }
+
+
+
+    }
+
+    public function updateBookingStatus(Request $request){
+
+       $id = $request->id;
+      $status = $request->status;
+
+      $updated =  BookingTour::where('id',$id)->update(['booking_status'=>$status]);
+
+      if($updated){
+          return response()->json('1');
+    }else{
+        return response()->json('2');
+    }
+
+
+
+    }
+
+}
