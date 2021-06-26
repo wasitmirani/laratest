@@ -36,7 +36,7 @@
 
 
     <button type="button" class="btn btn-primary" id="addUserBtn">Add</button>
-
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
     </div>
     </div>
     </div>

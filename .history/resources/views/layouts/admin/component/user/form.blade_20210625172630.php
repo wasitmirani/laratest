@@ -25,18 +25,12 @@
     <input type="password" name="password" id="password" class="form-control" placeholder="Confirm Password">
     </div>
     </div>
-    <div class="col-md-4 col-sm-12">
-        <div class="form-group">
-            <label>Upload An Image</label>
-        <input type="file" name="image" id="image" class="form-control">
-        </div>
-        </div>
     <div class="col-12">
     <hr class="mt-4">
 
 
     <button type="button" class="btn btn-primary" id="addUserBtn">Add</button>
-
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
     </div>
     </div>
     </div>

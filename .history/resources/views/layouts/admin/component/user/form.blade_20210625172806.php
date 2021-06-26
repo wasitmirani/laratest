@@ -27,7 +27,6 @@
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="form-group">
-            <label>Upload An Image</label>
         <input type="file" name="image" id="image" class="form-control">
         </div>
         </div>
@@ -36,7 +35,7 @@
 
 
     <button type="button" class="btn btn-primary" id="addUserBtn">Add</button>
-
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
     </div>
     </div>
     </div>
