@@ -33,7 +33,9 @@
   buttons: true,
   dangerMode: true,
 })
-var id = $(this).data('id');
+.then((willDelete) => {
+
+    var id = $(this).data('id');
 
 
 $.ajax({
@@ -44,9 +46,6 @@ $.ajax({
 
     },
 })
-
-.then((willDelete) => {
-
 
 if (willDelete) {
 

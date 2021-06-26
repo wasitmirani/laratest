@@ -8,7 +8,7 @@
     <li class="nav-item"><a class="nav-link active" id="user-tab" data-toggle="tab" href="#user-add">Add New</a></li>
     </ul>
     <div class="header-action">
-    <a href="{{route('admin.bookings')}}" class="btn btn-primary">Booking</a>
+    <a href="{{route('admin.users')}}" class="btn btn-primary">Booking</a>
     </div>
     </div>
      </div>

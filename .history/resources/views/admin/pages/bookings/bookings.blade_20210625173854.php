@@ -6,14 +6,9 @@
         <div class="tab-content mt-3">
 
 
-                <div class="container-fluid">
-
-
-
             @include('layouts.admin.component.bookings.table')
         </div>
     </div>
-</div>
 </div>
 @endsection
 @section('scripts')
