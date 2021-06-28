@@ -13,7 +13,7 @@
         <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-user"></i><span>Users</span></a>
          <ul>
             <li><a href="{{route('admin.users')}}"><span>Users</span></a></li>
-            <li><a href="{{route('admin.users.create')}}"><span>Add Users</span></a></li>
+            <li><a href="{{route('admin.users.store')}}"><span>Add Users</span></a></li>
        </ul>
   </li>
   <li>
@@ -21,14 +21,14 @@
      <ul>
         <li><a href="{{route('admin.bookings')}}"><span>Bookings</span></a></li>
 
-        <li><a href="{{route('admin.bookings.create')}}"><span>Add Bookings</span></a></li>
+        <li><a href="{{route('admin.bookings.store')}}"><span>Add Bookings</span></a></li>
    </ul>
 </li>
 <li>
     <a href="javascript:void(0)" class="has-arrow arrow-c"><i class="icon-map"></i><span>Locations</span></a>
      <ul>
         <li><a href="{{route('admin.locations')}}"><span>Locations</span></a></li>
-        <li><a href="{{route('admin.locations.create')}}"><span>Add Locations</span></a></li>
+        <li><a href="{{route('admin.locations.store')}}"><span>Add Locations</span></a></li>
    </ul>
 </li>
 
