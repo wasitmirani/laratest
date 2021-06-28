@@ -4,7 +4,7 @@
 <div class="section-body mt-3">
     <div class="container-fluid">
         <div class="tab-content mt-3">
-            <h3>Bookings</h3>
+            <h3>Bookings</h3></h3>
 
                 <div class="container-fluid">
 

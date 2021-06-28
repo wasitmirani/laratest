@@ -11,8 +11,8 @@ class AdminController extends Controller
     public function profile(){
 
         $user = Auth::user();
-
-        return view('admin.pages.profile',['user'=>$user]);
+        $title = "Profile";
+        return view('admin.pages.profile',['user'=>$user,'title'=>$title]);
 
     }
 }

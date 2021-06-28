@@ -4,7 +4,7 @@
     <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center">
     <ul class="nav nav-tabs page-header-tab">
-        <h3>Locations</h3>
+        <h3>Bookings</h3>
     </ul>
     <div class="header-action mt-2">
     <a href="{{route('admin.locations')}}" class="btn btn-primary">Locations</a>
