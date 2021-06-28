@@ -29,9 +29,10 @@ class HomeController extends Controller
             return redirect()->route('member.dashboard');
 
     }else{
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('dashboard');
 
     }
 
+    dd("jj");
     }
 }

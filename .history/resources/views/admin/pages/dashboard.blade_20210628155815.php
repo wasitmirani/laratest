@@ -4,18 +4,18 @@
 
 
             <div class="section-body mt-3">
-                <div class="container-fluid">
-                   <div class="row clearfix">
-                        <div class="col-lg-12">
-                           <div class="mb-4">
-                              <h4>Welcome {{Auth::user()->name}}!</h4>
-            {{-- <small>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></small> --}}
-                          </div>
-                       </div>
-                   </div>
+            <div class="container-fluid">
             <div class="row clearfix">
-               <div class="col-6 col-md-4 col-xl-3">
-                 <div class="card">
+            <div class="col-lg-12">
+            <div class="mb-4">
+            <h4>Welcome {{Auth::user()->name}}!</h4>
+            {{-- <small>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></small> --}}
+            </div>
+            </div>
+            </div>
+            <div class="row clearfix">
+            <div class="col-6 col-md-4 col-xl-3">
+            <div class="card">
             <div class="card-body ribbon">
             <div class="ribbon-box green">{{$data['totalUser']}}</div>
             <a href="{{route('admin.users')}}" class="my_sort_cut text-muted">
@@ -77,5 +77,4 @@
         </div>
     </div>
     </div>
-
 @endsection

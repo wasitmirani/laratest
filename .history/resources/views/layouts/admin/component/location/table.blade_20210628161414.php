@@ -24,13 +24,6 @@
     <th class="w100">Action</th>
     </tr>
     </thead>
-    <tfoot>
-        <tr>
-            <th>#</th>
-            <th>Location</th>
-            <th class="w100">Action</th>
-        </tr>
-    </tfoot>
     <tbody>
         @foreach($locations as $location)
     <tr>

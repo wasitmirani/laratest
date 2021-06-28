@@ -25,7 +25,6 @@
             <th>End Date</th>
             <th>Status</th>
             <th>Update Status</th>
-            <th>Action</th>
         </tr>
         </thead>
         <tfoot>
@@ -39,7 +38,6 @@
             <th>End Date</th>
             <th>Status</th>
             <th>Update Status</th>
-            <th>Action</th>
         </tr>
         </tfoot>
         <tbody>
