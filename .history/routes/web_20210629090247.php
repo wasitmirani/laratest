@@ -59,7 +59,6 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::get('/profile',[App\Http\Controllers\Admin\AdminController::class,'profile'])->name('profile');
         Route::get('/update/password',[App\Http\Controllers\Admin\AdminController::class,'updatePasswordForm'])->name('update.password.form');
         Route::post('/update/password',[App\Http\Controllers\Admin\AdminController::class,'updatePassword'])->name('update.password');
-        Route::post('/update/logo',[App\Http\Controllers\Admin\AdminController::class],'updateLogo')->name('update.logo');
 
 
         //USERS

@@ -3,7 +3,7 @@
 <div class="row clearfix row-deck mt-4">
     <h3 >Admin Profile</h3>
 
-    <div class="col-lg-4 col-sm-12 col-md-4">
+    <div class="col-lg-4 col-md-12">
         <ul class="list-group mb-3">
         <li class="list-group-item">
         <div class="media mb-0">
@@ -30,7 +30,12 @@
         <small class="text-muted">Date: </small>
         <p class="mb-0">07 Feb 2019</p>
         </li>
-
+        <li class="list-group-item">
+        <div>In Progress</div>
+        <div class="progress progress-xs mt-2">
+        <div class="progress-bar" data-transitiongoal="67" aria-valuenow="67" style="width: 67%;"></div>
+        </div>
+        </li>
         <li class="list-group-item">
         Notifications
         <div class="float-right">
@@ -49,12 +54,28 @@
         </label>
         </div>
         </li>
-
-
+        <li class="list-group-item">
+        Message email
+        <div class="float-right">
+        <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1">
+        <span class="custom-control-label">&nbsp;</span>
+         </label>
+        </div>
+        </li>
+        <li class="list-group-item">
+        Applicant email
+        <div class="float-right">
+        <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" name="example-checkbox1" value="option1" checked="">
+        <span class="custom-control-label">&nbsp;</span>
+        </label>
+        </div>
+        </li>
         </ul>
         </div>
 
-    <div class="col-lg-8 col-md-8">
+    <div class="col-lg-8 col-md-12">
     <div class="card">
     <div class="card-header">
     <h3 class="card-title">Personal Info</h3>

@@ -3,7 +3,7 @@
 <div class="row clearfix row-deck mt-4">
     <h3 >Admin Profile</h3>
 
-    <div class="col-lg-4 col-sm-12 col-md-4">
+    <div class="col-lg-4 col-md-4">
         <ul class="list-group mb-3">
         <li class="list-group-item">
         <div class="media mb-0">

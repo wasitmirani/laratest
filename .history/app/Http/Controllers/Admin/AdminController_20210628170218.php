@@ -16,7 +16,6 @@ class AdminController extends Controller
 
     }
     public function updatePasswordForm(){
-        $user = Auth::user();
-        return view('admin.pages.settings.setpassword',['user'=>$user]);
+        return view('admin.pages.settings.setpassword');
     }
 }
