@@ -110,11 +110,10 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::post('/packages/update/{id}',[App\Http\Controllers\Admin\PackageController::class,'update'])->name('packages.update');
 
 
+        Route::view('/user',[App\Http\Livewire\Prac::class]);
 
 
 
 });
-
-
 
 

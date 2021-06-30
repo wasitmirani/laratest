@@ -116,5 +116,6 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
 });
 
 
+Route::view('/user',[App\Http\Livewire\Prac::class]);
 
 
