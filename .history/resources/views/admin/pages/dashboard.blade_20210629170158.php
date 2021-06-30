@@ -40,7 +40,7 @@
             <div class="card">
             <div class="card-body ribbon">
             <div class="ribbon-box orange">{{$upcomingTours}}</div>
-            <a href="{{route('admin.upcoming.tours')}}" class="my_sort_cut text-muted">
+            <a href="{{route('upcoming.tours')}}" class="my_sort_cut text-muted">
             <i class="icon-calendar"></i>
             <span>UpComing Tours</span></span>
             </a>
