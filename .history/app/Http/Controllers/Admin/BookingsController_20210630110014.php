@@ -66,7 +66,7 @@ class BookingsController extends Controller
 
 
         $booking = BookingTour::where('id',$id)->first();
-
+        dd($request->all());
 
         $booking->location_id = $request->location;
         $booking->booking_date = $request->booking_date;

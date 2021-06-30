@@ -40,7 +40,7 @@ $.ajax({
     },
     success:function(msg){
 
-        swal("message! "+msg )
+        swal("message "+msg )
 
 
     }

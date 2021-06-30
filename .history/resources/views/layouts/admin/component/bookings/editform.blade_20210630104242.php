@@ -9,7 +9,7 @@
         <select class="form-control" name="location"  id="location">
             <option>Choose Location</option>
             @foreach($locations as $location)
-            <option  @if(isset($booking->location_id) == $location->id) selected @endif value="{{$location->id}}">{{$location->name}}</option>
+            <option  @if(isset($booking->location->name) == $location->name) selected @endif value="{{$location->id}}">{{$location->name}}</option>
             @endforeach
 
         </select>

@@ -68,9 +68,9 @@
   <select class="form-control" name="status"  id="status">
       <option>Update Status</option>
 
-      <option @if ($booking->booking_status == 1) selected @endif value="1">Pending</option>
-      <option @if ($booking->booking_status == 2) selected @endif  value="2">Approve</option>
-    <option @if  ($booking->booking_status == 3) selected @endif  value="3">Reject</option>
+      <option @if ($booking->booking_status == '1') selected @endif value="1">Pending</option>
+      <option @if ($booking->booking_status === '2') selected @endif  value="2">Approve</option>
+    <option @if  ($booking->booking_status === '3') selected @endif  value="3">Reject</option>
   </select>
   @else
   <select class="form-control" name="status"  id="status">

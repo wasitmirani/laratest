@@ -67,12 +67,11 @@ class BookingsController extends Controller
 
         $booking = BookingTour::where('id',$id)->first();
 
-
         $booking->location_id = $request->location;
         $booking->booking_date = $request->booking_date;
         $booking->start_booking_date = $request->start_date;
         $booking->end_booking_date = $request->end_date;
-        $booking->booking_status = $request->status;
+        $booking->booking_status = $request->booking_status;
         $updated = $booking->save();
 
         if($updated){

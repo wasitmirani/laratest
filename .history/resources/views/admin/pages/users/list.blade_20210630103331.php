@@ -40,8 +40,6 @@ $.ajax({
     },
     success:function(msg){
 
-        swal("message! "+msg )
-
 
     }
 })
@@ -51,7 +49,7 @@ $.ajax({
 });
 
 
-
+    })
 
     $(".update_role").on('click',function(){
 
