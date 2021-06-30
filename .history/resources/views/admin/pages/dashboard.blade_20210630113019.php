@@ -30,7 +30,7 @@
             <div class="card-body ribbon">
                 <div class="ribbon-box green">{{$totalBooking}}</div>
             <a href="{{route('admin.bookings')}}" class="my_sort_cut text-muted">
-            <i class="icon-calendar"></i>
+            <i class="icon-like"></i>
             <span>Bookings</span>
             </a>
             </div>
@@ -52,7 +52,7 @@
             <div class="card-body ribbon">
                 <div class="ribbon-box green">{{$totalLocation}}</div>
             <a href="{{route('admin.locations')}}" class="my_sort_cut text-muted">
-            <i class="icon-navigation"></i>
+            <i class="map-pin"></i>
             <span>Locations</span>
             </a>
             </div>

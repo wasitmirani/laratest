@@ -111,8 +111,8 @@ class PackageController extends Controller
     }
     public function delete($id){
 
-        $package = Package::with('locations')->with('booking_tours')->where('id',$id)->first();
-
+        $package = Package::with('locations')->where('id',$id)->first();
+        $package->locations()->delete();
         if($package->delete()){
 
             return response()->json('Data Deleted Successfully');
