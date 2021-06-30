@@ -29,7 +29,7 @@ class MemberController extends Controller
         $to = $dt->format( 'dS M, Y (D)' );
 
 
-        $up_commings = BookingTour::with('user')->with('location')->with('package')->where([['booking_date','<=',now()],['user_id','=',$id]])->get();
+        $up_commings = BookingTour::with('tour')->with('package')->with('user')->whereBetween('start_booking_date', [$from, $to])->get();
 
         $total_bookings = BookingTour::where('user_id',$id)->count();
         $total_pending = BookingTour::where([['user_id','=',$id],['booking_status','=',1]])->count();
@@ -50,7 +50,6 @@ class MemberController extends Controller
         return view('member.pages.bookings',compact('bookings'));
     }
     public function upcomingTours(){
-        $id = Auth::user()->id;
         $dateObj = new DateTime();
         $from = $date = date('Y-m-d');
 
@@ -58,7 +57,7 @@ class MemberController extends Controller
         $to =  $dateObj->format( 'dS M, Y (D)' );
 
 
-        $upcommings =   BookingTour::with('user')->with('location')->with('package')->where([['booking_date','<=',now()],['user_id','=',$id]])->get();
+        $upcommings = BookingTour::with('tour')->with('package')->with('user')->whereBetween('start_booking_date', [$from, $to])->get();
 
 
         $tours = Tour::all();

@@ -20,10 +20,14 @@ class FrontEndController extends Controller
      */
     public function index()
     {
-
+        //
         $tours=Tour::latest()->with('tourDetails')->take(10)->get();
-        $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
+        $packages = Package::with('locations')->orderby('id','desc')->get();
+
+
+        return view('admin.pages.packages.packages',['packages'=>$packages]);
         $locations  = Location::all();
+
         return view('frontend.pages.index',compact('tours','packages', 'locations'));
     }
 
@@ -82,7 +86,7 @@ class FrontEndController extends Controller
         return view('frontend.pages.aboutus');
     }
     public function packages(){
-        $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
+        $packages=Package::latest()->paginate(5);
         return view("frontend.pages.packages",compact('packages'));
     }
 

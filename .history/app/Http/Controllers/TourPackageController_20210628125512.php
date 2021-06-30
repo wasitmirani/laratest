@@ -8,9 +8,7 @@ use Illuminate\Http\Request;
 class TourPackageController extends Controller
 {
     public function index(){
-        $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
-
-
+        $packages=Package::join('tour_packages','tour_packages.package_id','=','packages.id')->select('tour_packages.price','packages.*')->latest()->with('tourPackages')->paginate(5);
         return view('frontend.pages.packages',compact('packages'));
 
 

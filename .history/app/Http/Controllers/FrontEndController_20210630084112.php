@@ -83,6 +83,7 @@ class FrontEndController extends Controller
     }
     public function packages(){
         $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
+        dd($packages);
         return view("frontend.pages.packages",compact('packages'));
     }
 

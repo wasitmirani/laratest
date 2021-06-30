@@ -46,6 +46,13 @@ class ToursController extends Controller
 
           $tours = BookingTour::with('user')->with('location')->with('package')->where([['booking_date','<=',now()],['booking_status','=',3]])->get();
           return view('admin.pages.tours.tours',compact('tours'));
+
+
+
+
+
+
+
     }
 
 

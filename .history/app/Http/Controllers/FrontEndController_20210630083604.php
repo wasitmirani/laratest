@@ -22,7 +22,7 @@ class FrontEndController extends Controller
     {
 
         $tours=Tour::latest()->with('tourDetails')->take(10)->get();
-        $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
+        $packages = Package::with('locations')->orderby('id','desc')->get();
         $locations  = Location::all();
         return view('frontend.pages.index',compact('tours','packages', 'locations'));
     }
