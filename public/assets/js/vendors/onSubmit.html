@@ -1,0 +1,37 @@
+onSubmit(){
+    Vue.$toast.default('Please wait data is processing!');
+      let formdata = new FormData();
+      formdata.append("name", this.name);
+      formdata.append("description", this.description);
+      formdata.append("thembunail", this.thembunail);
+      formdata.append("id", this.editId);
+      axios.post('/portal/service/store',formdata).then((res)=>{
+          setTimeout(() => {
+               Vue.$toast.success('New service has been saved');
+          }, 1500);
+
+      });
+     },
+
+
+     Vue.filter("projectstatus", function(value) {
+    switch (value) {
+        case 1:
+            return "<span class='btn btn-info btn-round mr-1'>inprocess </span>";
+            break;
+        case 0:
+            return "<span class='btn btn-warning btn-round   mr-1'>pending </span>";
+            break;
+        case 2:
+            return "<span class='btn btn-success btn-round   mr-1'>completed </span>";
+            break;
+        case 3:
+            return "<span class='btn btn-danger btn-round   mr-1'>cancel </span>";
+            break;
+
+        default:
+            return "<span class='btn btn-warning btn-round  mr-1'>pending </span>";
+            break;
+    }
+
+});

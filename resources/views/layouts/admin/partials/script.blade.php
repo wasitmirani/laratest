@@ -1,7 +1,6 @@
 
 
 <script src="{{asset('js/jquery.js')}}"></script>
-
 <script src="{{asset('assets/bundles/knobjs.bundle.js')}}" ></script>
 <script src="{{asset('assets/bundles/c3.bundle.js')}}" ></script>
 <script src="{{asset('assets/js/page/index.js')}}"></script>

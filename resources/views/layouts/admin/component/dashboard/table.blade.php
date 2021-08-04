@@ -38,8 +38,7 @@
     <ul class="list-unstyled team-info sm margin-0 w150">
     <li>
         @if (isset($latestbooking->user->image))
-        <img src="{{asset('admin/img/users/'.$latestbooking->user->image)}}" alt="Avatar" style="width: 36px;
-        height: 29px;">
+        <img src="{{asset('admin/img/users/'.$latestbooking->user->image)}}" alt="Avatar" style="width: 36px; height: 29px;">
         @else
         <img src="{{asset('assets/images/xs/avatar1.jpg')}}" alt="Avatar">
 

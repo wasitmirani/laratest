@@ -9,7 +9,7 @@ use App\Http\Controllers\TourPackageController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Backend\PackageController;
-// use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\UserController;
 
 
 /*
