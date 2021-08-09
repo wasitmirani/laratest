@@ -66,17 +66,17 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         //USERS
         Route::get('/users',[App\Http\Controllers\Admin\UserController::class,'index'])->name('users');
         Route::get('/users/create',[App\Http\Controllers\Admin\UserController::class,'create'])->name('users.create');
-<<<<<<< HEAD
+
         Route::post('/users',[App\Http\Controllers\Admin\UserController::class,'store'])->name('users.store');
         Route::post('/users/delete/{id}',[App\Http\Controllers\Admin\UserController::class,'delete'])->name('user.delete');
         Route::get('/users/edit/{id}',[App\Http\Controllers\Admin\UserController::class,'edit'])->name('user.edit');
         Route::post('/users/update/{id}',[App\Http\Controllers\Admin\UserController::class,'update'])->name('user.update');
         Route::post('/update/users/role',[App\Http\Controllers\Admin\UserController::class,'updateUserRole'])->name('update.user.role');
-=======
+
         Route::post('/users/delete/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.delete');
         Route::get('/users/edit/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.edit');
         Route::post('/users/update/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.update');
->>>>>>> parent of 563bfec (User Crud Completed)
+
 
         //BOOKINGS
         Route::get('/bookings',[App\Http\Controllers\Admin\BookingsController::class,'index'])->name('bookings');
