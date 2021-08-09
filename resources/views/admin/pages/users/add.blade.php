@@ -17,16 +17,14 @@
 <div class="section-body mt-3">
     <div class="container-fluid">
         <div class="tab-content mt-3">
-            @if(isset($user))
-            @include('layouts.admin.component.user.editform')
-            @else
+
             @include('layouts.admin.component.user.form')
-            @endif
 
         </div>
     </div>
 </div>
 @endsection
+<<<<<<< HEAD
 @section('scripts')
 <script>
     $(document).ready(function(){
@@ -112,3 +110,5 @@ $("#addUserForm").on('submit',function(e){
 
 </script>
 @endsection
+=======
+>>>>>>> parent of 563bfec (User Crud Completed)

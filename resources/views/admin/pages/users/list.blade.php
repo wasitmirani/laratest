@@ -17,12 +17,13 @@
     <div class="container-fluid">
         <div class="tab-content mt-3">
             @include('layouts.admin.component.user.table')
-
+            @include('layouts.admin.component.user.form')
 
         </div>
     </div>
 </div>
 @endsection
+<<<<<<< HEAD
 @section('scripts')
 <script>
      $(".dltUserBtn").on('click',function(){
@@ -116,3 +117,5 @@ $.ajax({
 </script>
 @endsection
 
+=======
+>>>>>>> parent of 563bfec (User Crud Completed)

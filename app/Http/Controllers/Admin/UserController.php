@@ -26,6 +26,7 @@ class UserController extends Controller
     }
     public function store(Request $request){
 
+<<<<<<< HEAD
 
         $user = new User;
         $validate = $request->validate([
@@ -55,16 +56,18 @@ class UserController extends Controller
         }
 
 
+=======
+>>>>>>> parent of 563bfec (User Crud Completed)
 
 
     }
     public function edit($id){
 
-        $user = User::where('id',$id)->first();
-        return view('admin.pages.users.add',['user'=>$user]);
+
 
     }
     public function update(Request $request, $id){
+<<<<<<< HEAD
 
 
         $user = User::where('id',$id)->first();
@@ -103,12 +106,15 @@ class UserController extends Controller
         }else{
             return response()->json("0");
         }
+=======
+>>>>>>> parent of 563bfec (User Crud Completed)
 
 
 
     }
     public function delete($id){
 
+<<<<<<< HEAD
         $user = User::where('id',$id)->first();
 
         if($user->delete()){
@@ -120,6 +126,8 @@ class UserController extends Controller
         }
 
 
+=======
+>>>>>>> parent of 563bfec (User Crud Completed)
 
 
     }
