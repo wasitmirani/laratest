@@ -4,6 +4,7 @@
         <h4 class="card-title">Edit User</h4>
     <div class="row clearfix">
         <form id="editUserForm" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
 

@@ -7,6 +7,7 @@
 
         </div>
         <form id="addUserForm" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">

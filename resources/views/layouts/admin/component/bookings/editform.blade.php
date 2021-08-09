@@ -1,3 +1,4 @@
+{{ csrf_field() }}
 <div class="tab-pane fade active show" id="user-add" role="tabpanel">
     <div class="card">
     <div class="card-body">

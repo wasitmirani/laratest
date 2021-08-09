@@ -2,6 +2,8 @@
     <div class="card">
     <div class="card-body">
     <div class="row clearfix">
+        <form>
+            {{ csrf_field() }}
     <div class="col-lg-12 col-md-12 col-sm-12">
     <div class="form-group">
         <label>Location</label>
@@ -17,6 +19,7 @@
 
     </div>
     </div>
+</form>
     </div>
     </div>
     </div>

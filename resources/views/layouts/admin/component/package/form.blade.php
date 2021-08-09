@@ -1,3 +1,4 @@
+
 <div class="tab-pane fade active show" id="user-add" role="tabpanel">
     <div class="card">
     <div class="card-body">
@@ -14,7 +15,7 @@
 
         <form @if(isset($package)) id="editPackageForm" @else id="addPackageForm" @endif  enctype="multipart/form-data">
 
-
+{{ csrf_field() }}
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="form-group">
