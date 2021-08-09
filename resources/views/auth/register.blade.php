@@ -19,7 +19,7 @@
                 </div>
                 <div class="col-lg-5 dis-flex">
                     <form action="{{route('register')}}" method="post">
-                    @csrf
+                 {{ csrf_field() }}
                         <div class="row">
                             <div class="col-12">
                                 <label for="first-name">
