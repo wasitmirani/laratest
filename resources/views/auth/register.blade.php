@@ -1,4 +1,3 @@
-
 @extends('layouts.frontend.authmaster')
 
 @section('content')

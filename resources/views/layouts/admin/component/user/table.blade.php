@@ -60,7 +60,7 @@
 <span class="tag tag-danger">Admin</span>
 @endif</td>
 <td>
-<<<<<<< HEAD
+
 
     <ul class="metismenu">
       <li>
@@ -80,10 +80,10 @@
 <td>
     <a type="button" href="{{route('admin.user.edit',$user->id)}}" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></a>
     <button type="button" class="btn btn-icon js-sweetalert dltUserBtn" title="Delete" data-type="confirm" id="" data-id="{{$user->id}}"><i class="fa fa-trash-o text-danger"></i></button>
-=======
+
     <button type="button" class="btn btn-icon" title="Edit"><i class="fa fa-edit"></i></button>
     <button type="button" class="btn btn-icon js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
->>>>>>> parent of 563bfec (User Crud Completed)
+
     </td>
 </tr>
 

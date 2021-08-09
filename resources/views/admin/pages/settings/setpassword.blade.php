@@ -8,7 +8,7 @@
 
     <div class="card">
     <div class="card-header">
-    <h3 class="card-title">Seettings</h3>
+    <h3 class="card-title">Settings</h3>
     <div class="card-options">
     {{-- <a href="javascript:void(0)" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a> --}}
     <div class="item-action dropdown ml-2">

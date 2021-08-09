@@ -24,7 +24,7 @@
     </div>
 </div>
 @endsection
-<<<<<<< HEAD
+
 @section('scripts')
 <script>
     $(document).ready(function(){

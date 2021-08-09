@@ -3,7 +3,6 @@
     <div class="card-body">
         <h4 class="card-title">Add New User</h4>
     <div class="row clearfix">
-<<<<<<< HEAD
         <div id="errors">
 
         </div>
@@ -57,9 +56,6 @@
 
 
 
-
-
-=======
     <div class="col-lg-12 col-md-12 col-sm-12">
     <div class="form-group">
     <input type="text" class="form-control" placeholder="Employee ID *">
@@ -116,7 +112,7 @@
 
     <button type="button" class="btn btn-primary">Add</button>
     <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
->>>>>>> parent of 563bfec (User Crud Completed)
+
     </div>
     </div>
     </div>
