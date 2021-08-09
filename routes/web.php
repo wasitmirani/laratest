@@ -36,8 +36,7 @@ Route::get('/contactus',[FrontEndController::class,'contactus'])->name('contactu
 Route::post('/contactus',[FrontEndController::class,'sendMessage'])->name('send.message');
 Route::get('/all/packages',[TourPackageController::class,'index'])->name('all.packages');
 Route::get('/all/tours',[TourController::class,'index'])->name('all.tours');
-
-
+Route::get('tour/detail',[TourController::class,'tourdetail'])->name('tour.detail');
 // Dashboard Apis
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -91,6 +90,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::post('/Tours/update/{id}',[App\Http\Controllers\Admin\ToursController::class,'update'])->name('Tours.update');
         Route::get('/tours',[App\Http\Controllers\Admin\ToursController::class,'tours'])->name('tours');
         Route::get('/upcoming/tours',[App\Http\Controllers\Admin\ToursController::class,'upcomingTours'])->name('upcoming.tours');
+
 
 
         //Location

@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <a class="card" href="#!">
+                    <a class="card" href="{{ route('tour.detail') }}">
                         <div class="front" style="background-image: url(frontend/assets/images/travel-1.jpg)">
                             <h3>Condo 1</h3>
                         </div>
@@ -40,7 +40,7 @@
                         </div></a>
                     </div>
                     <div class="col-lg-4">
-                        <a class="card" href="#!">
+                        <a class="card" href="{{ route('tour.detail') }}">
                             <div class="front" style="background-image: url(frontend/assets/images/travel-2.jpg)">
                                 <h3>Condo 2</h3>
                             </div>
@@ -54,7 +54,7 @@
                             </div></a>
                         </div>
                         <div class="col-lg-4">
-                            <a class="card" href="#!">
+                            <a class="card" href="{{ route('tour.detail') }}">
                                 <div class="front" style="background-image: url(frontend/assets/images/travel-1.jpg)">
                                     <h3>Condo 3</h3>
                                 </div>

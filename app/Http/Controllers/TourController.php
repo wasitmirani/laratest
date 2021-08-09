@@ -19,4 +19,9 @@ class TourController extends Controller
     }
 
 
+    public function tourDetail(){
+        return view('frontend.pages.tourdetail');
+    }
+
+
 }

@@ -90,13 +90,9 @@
 
 
             {{-- Tour Section  --}}
-            @if(isset($tours))
-            @component('frontend.components.tourComponent',['tours'=>$tours])
 
-            @endcomponent
-            @else
 
-            @endif
+
             <!-- Packages -->
 
             @if(count($packages)>0)
