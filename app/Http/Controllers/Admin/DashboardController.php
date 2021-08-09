@@ -25,4 +25,7 @@ class DashboardController extends Controller
         return view('admin.pages.dashboard',compact('data','totalBooking','totalLocation','upcomingTours'));
 
     }
+
+
+    
 }
