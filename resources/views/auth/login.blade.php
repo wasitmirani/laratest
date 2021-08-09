@@ -20,7 +20,7 @@
             </div>
             <div class="col-lg-5 dis-flex">
                 <form action="{{route('login')}}" method="post">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                 {{ csrf_field() }}
                     <div class="row">
 
                         <div class="col-12">
