@@ -5,10 +5,6 @@
 
 <body class="font-montserrat sidebar_dark">
 
-{{-- <div class="page-loader-wrapper">
-    <div class="loader">
-    </div>
-</div> --}}
 <div id="main_content">
 @include('layouts.admin.component.topbar')
 @include('layouts.admin.component.leftsidebar')

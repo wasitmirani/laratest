@@ -110,5 +110,4 @@ $("#addUserForm").on('submit',function(e){
 
 </script>
 @endsection
-=======
->>>>>>> parent of 563bfec (User Crud Completed)
+
