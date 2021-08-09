@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -51,7 +52,7 @@ class AdminController extends Controller
         $user = User::where('id',$id)->first();
 
        $updated = User::where('id',$id)->update([
-            'password' => $request->password
+            'password' => Hash::make($request->password)
         ]);
 
         if($updated){
@@ -97,7 +98,7 @@ class AdminController extends Controller
         if($request->password == null){
             $user->password = $user->password;
           }else{
-            $user->password = $request->password;
+            $user->password =  Hash::make($request->password);
 
           }
 

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\TourPackageController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -57,10 +58,10 @@ Route::middleware(['auth'])->prefix('member')->name('member.')->group(function (
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
         Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-        Route::get('/profile',[DashboardController::class,'profile'])->name('profile');
-        Route::get('/update/password',[DashboardController::class,'updatePasswordForm'])->name('update.password.form');
-        Route::post('/update/password',[DashboardController::class,'updatePassword'])->name('update.password');
-        Route::post('/update/profile',[DashboardController::class, 'updateProfile'])->name('update.profile');
+        Route::get('/profile',[AdminController::class,'profile'])->name('profile');
+        Route::get('/update/password',[AdminController::class,'updatePasswordForm'])->name('update.password.form');
+        Route::post('/update/password',[AdminController::class,'updatePassword'])->name('update.password');
+        Route::post('/update/profile',[AdminController::class, 'updateProfile'])->name('update.profile');
 
 
         //USERS

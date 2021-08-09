@@ -77,7 +77,7 @@
 
         <div class="form-group">
             <label>Confirm Password</label>
-            <input type="password" name="password-confirmation" class="form-control"  placeholder="Confirm New Password" >
+            <input type="password" name="password_confirmation" class="form-control"  placeholder="Confirm New Password" >
             </div>
 
         <div class="form-group">
