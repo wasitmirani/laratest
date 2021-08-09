@@ -16,7 +16,6 @@
 
 <div class="section-body mt-3">
     <div class="container-fluid">
-        <div id="errors"></div>
         <div class="tab-content mt-3">
             @if(isset($user))
             @include('layouts.admin.component.user.editform')
@@ -66,19 +65,12 @@ $("#addUserForm").on('submit',function(e){
 
             },
             error: function (err) {
-        if (err.status == 422) { // when status code is 422, it's a validation issue
+                if (err.status == 422) { // when status code is 422, it's a validation issue
 
-        var errors = err.responseJSON.errors
-console.log(JSON.stringify(errors))
-$('#errors').empty()
-    jQuery.each(errors, (index, item) => {
-
-        $('#errors').fadeIn().append("<p class='alert alert-danger'>"+item+"<p>");
-
-});
-
-        }
-    }
+            console.log(err.responseJSON.errors)
+            $('#errors').fadeIn().append("<p class='alert alert-danger'>"+err.responseJSON.message+"<p>");
+                }
+            }
 
         })
     })

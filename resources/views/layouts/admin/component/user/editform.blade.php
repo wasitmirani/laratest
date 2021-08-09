@@ -30,26 +30,19 @@
             </div>
 
           </div>
-          <div class="row">
+
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="form-group">
                     <label>Upload An Image</label>
                 <input type="file" name="image" id="image" class="form-control" >
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12">
-
-                <div class="form-group">
-                    <div class="img-thumbnail mt-4 ml-4" style="width: 100px; height: 69px;">
-                        <img style="width: 91px; height: 60px;"  src="{{asset('admin/img/users/'.$user->image)}}">
-                    </div>
-
-
+            <div class="col-12">
+                <div class="col-md-4 col-sm-12">
+                    <img src="{{asset('admin/img/users/'.$user->image)}}" style="width:40px; height:40px">
+                    <input type="hidden" name="old_image" value="{{$user->image}}">
                 </div>
-             </div>
-          </div>
-
-
+            </div>
             <hr class="mt-4">
 
         <input type="hidden" id="id" value="{{$user->id}}">

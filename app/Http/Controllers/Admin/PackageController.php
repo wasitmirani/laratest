@@ -30,14 +30,14 @@ class PackageController extends Controller
     public function store(Request $request){
 
         $package = new Package;
-        $validate = $request->validate([
-            'location' => 'required',
-            'name' => 'required',
-            'description' => 'required',
-            'image' => 'required',
-            'price' => 'required',
+        // $validate = $request->Validate([
+        //     'location' => 'required',
+        //     'title' => 'required',
+        //     'description' => 'required',
+        //     'image' => 'required',
+        //     'price' => 'required',
 
-        ]);
+        // ]);
 
         if ($request->hasfile('image')) {
             $name = !empty($request->name) ? $request->name : config('app.name');

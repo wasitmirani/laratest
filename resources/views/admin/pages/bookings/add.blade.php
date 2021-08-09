@@ -15,7 +15,6 @@
 
 <div class="section-body mt-3">
     <div class="container-fluid">
-        <div class="errors"></div>
         <div class="tab-content mt-3">
 
 @include('layouts.admin.component.bookings.editform')
@@ -52,25 +51,7 @@
 
 
 
-            },
-            error:function(data){
-
-if (err.status == 422) { // when status code is 422, it's a validation issue
-
-var errors = err.responseJSON.errors
-console.log(JSON.stringify(errors))
-$('#errors').empty()
-jQuery.each(errors, (index, item) => {
-
-$('#errors').fadeIn().append("<p class='alert alert-danger'>"+item+"<p>");
-
-});
-
-}
-
-
-
-}
+            }
         }
         })
 
@@ -99,26 +80,7 @@ $('#errors').fadeIn().append("<p class='alert alert-danger'>"+item+"<p>");
 
 
 
-            },
-
-            error:function(data){
-
-        if (err.status == 422) { // when status code is 422, it's a validation issue
-
-var errors = err.responseJSON.errors
-console.log(JSON.stringify(errors))
-$('#errors').empty()
-jQuery.each(errors, (index, item) => {
-
-$('#errors').fadeIn().append("<p class='alert alert-danger'>"+item+"<p>");
-
-});
-
-}
-
-
-
-    }
+            }
         }
         })
 

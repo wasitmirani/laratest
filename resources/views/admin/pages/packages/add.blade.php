@@ -61,6 +61,7 @@ $.ajax({
     error: function (err) {
         if (err.status == 422) { // when status code is 422, it's a validation issue
 
+<<<<<<< HEAD
         var errors = err.responseJSON.errors
 console.log(JSON.stringify(errors))
 $('#errors').empty()
@@ -70,6 +71,10 @@ $('#errors').empty()
 
 });
 
+=======
+    console.log(err.responseJSON.errors)
+    $('#errors').fadeIn().append("<p class='alert alert-danger'>"+err.responseJSON.message+"<p>");
+>>>>>>> parent of 8928d78 (errors shown on forms)
         }
     }
 
@@ -104,14 +109,8 @@ $.ajax({
     error: function (err) {
         if (err.status == 422) { // when status code is 422, it's a validation issue
 
-    var errors = err.responseJSON.errors
-    $.map(data,function(errors){
-        $('#errors').fadeIn().append("<p class='alert alert-danger'>"+errors+"<p>");
-
-    })
-
-
-
+    console.log(err.responseJSON.errors)
+    $('#errors').fadeIn().append("<p class='alert alert-danger'>"+err.responseJSON.message+"<p>");
         }
     }
 

@@ -74,6 +74,9 @@
                         <input type="file" name="image" id="image" class="form-control">
                         @if (isset($package->thumbnail))
                         <input type="hidden" name="oldimage" value="{{$package->thumbnail}}" id="image" >
+                        <div class="img-thumbnail">
+                            <img style="width:60px; height:60px" src="{{asset('/admin/img/package/'.$package->thumbnail)}}">
+                        </div>
 
 
                         @endif
@@ -84,32 +87,19 @@
 
             </div>
 
-<div class="row">
-    <div class="col-md-6 col-sm-12">
-        <div class="form-group">
-            <label>Description</label>
-            @if (isset($package))
-          <textarea class="form-control" name="description" placeholder="Enter Details........">{!! $package->description !!}</textarea>
-          @else
-          <textarea class="form-control" name="description" placeholder="Enter Details........"></textarea>
-          @endif
+
+           <div class="col-md-6 col-sm-12">
+              <div class="form-group">
+                  <label>Description</label>
+                  @if (isset($package))
+                <textarea class="form-control" name="description" placeholder="Enter Details........">{!! $package->description !!}</textarea>
+                @else
+                <textarea class="form-control" name="description" placeholder="Enter Details........"></textarea>
+                @endif
 
 
-       </div>
-     </div>
-     <div class="col-md-6 col-sm-12">
-
-        <div class="form-group">
-            <div class="img-thumbnail mt-4 ml-4" style="width: 100px; height: 69px;">
-                <img style="width: 91px; height: 60px;"  src="{{asset('/admin/img/package/'.$package->thumbnail)}}">
-            </div>
-
-
-        </div>
-     </div>
-
-</div>
-
+             </div>
+           </div>
            <div class="col-12">
             <hr class="mt-4">
 

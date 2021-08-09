@@ -25,11 +25,6 @@ class LocationController extends Controller
     }
     public function store(Request $request){
 
-
-        $validate = $request->validate([
-            'name'=>'required'
-        ]);
-
         $location = new Location;
         $location->name = $request->name;
         $added = $location->save();

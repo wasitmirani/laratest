@@ -15,7 +15,6 @@
 
 <div class="section-body mt-3">
     <div class="container-fluid">
-        <p id="errors"></p>
         <div class="tab-content mt-3">
 @if (isset($location))
 @include('layouts.admin.component.location.editForm')
@@ -74,25 +73,7 @@ $.ajax({
 
  });
 
-    },
-    error:function(data){
-
-if (data.status == 422) { // when status code is 422, it's a validation issue
-
-     var errors = data.responseJSON.errors
-    console.log(JSON.stringify(errors))
-$('#errors').empty()
-jQuery.each(errors, (index, item) => {
-
-$('#errors').fadeIn().append("<p class='alert alert-danger'>"+item+"<p>");
-
-});
-
-}
-
-
-
-}
+    }
 
 
 })

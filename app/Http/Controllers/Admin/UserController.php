@@ -31,7 +31,7 @@ class UserController extends Controller
         $validate = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255','unique:users'],
-            'password' => ['required','confirmed'],
+            'password' => ['confirmed'],
         ]);
 
         if ($request->hasfile('image')) {
