@@ -46,10 +46,14 @@
     <div class="col-lg-12 col-md-12">
 
     @foreach($errors->all() as $error)
-    <li>{{ $error }}</li>
+    <li class="alert alert-danger">{{ $error }}</li>
 @endforeach
     <hr>
     <h6>Set Password</h6>
+    @if (Session::has('message'))
+    <p class="alert alert-success">{{ Session::get('message') }}</p>
+
+    @endif
    <form action="{{route('admin.update.password')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
@@ -67,11 +71,11 @@
    </form>
 
     <div class="col-lg-12 col-md-12">
-        {{-- <hr>
+        <hr>
         <h6>Set Logo</h6>
         <form id="changeLogo">
             <div class="form-group">
-                <input type="file" id="image" class="form-control" placeholder="Current Password">
+                <input type="file"name="image" id="image" class="form-control" placeholder="Current Password">
                 </div>
                 <button type="submit" class="btn btn-round btn-primary" id="" >Update</button> &nbsp;&nbsp;
                 </div>
@@ -80,7 +84,7 @@
 
 
                 </div>
-        </form> --}}
+        </form>
 
     </div>
     </div>
@@ -91,55 +95,57 @@
 @endsection
 @section('scripts')
 <script>
-//     $(document).ready(function(){
-//         $.ajaxSetup({
-//     headers: {
-//         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//     }
-// });
+    $(document).ready(function(){
+        $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
 
 
 
 
 
 
-//         $("#changeLogo").on('submit',function(e){
-//             e.preventDefault();
-//             var data = new FormData(this)
-//             $.ajax({
-//             type:"POST",
-//             url:"/admin/update/logo",
-//             data: data,
-//             processData: false,
-//             contentType: false,
-//             success:function(msg){
+        $("#changeLogo").on('submit',function(e){
+            e.preventDefault();
+            var data = new FormData(this)
+            $.ajax({
+            type:"POST",
+            url:"/admin/update/logo",
+            data: data,
+            processData: false,
+            contentType: false,
+            success:function(msg){
 
-//                if(msg == true){
-//                 swal( "Logo Updated", "success");
+               if(msg == true){
+                swal( "Logo Updated", "success");
 
-
-//                }else{
-
-//                 swal( "Something Went Wrong", "error");
-//                }
-
-//             },
-//             error: function (err) {
-//                 if (err.status == 422) { // when status code is 422, it's a validation issue
-
-//             console.log(err.responseJSON.errors)
-//             $('#errors').fadeIn().append("<p class='alert alert-danger'>"+err.responseJSON.message+"<p>");
-//                 }
-//             }
-
-//         })
+                window.location.reload();
 
 
+               }else{
+
+                swal( "Something Went Wrong", "error");
+               }
+
+            },
+            error: function (err) {
+                if (err.status == 422) { // when status code is 422, it's a validation issue
+
+            console.log(err.responseJSON.errors)
+            $('#errors').fadeIn().append("<p class='alert alert-danger'>"+err.responseJSON.message+"<p>");
+                }
+            }
+
+        })
 
 
-//         })
 
-//     })
+
+        })
+
+    })
 
 </script>
 @endsection

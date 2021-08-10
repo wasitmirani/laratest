@@ -16,7 +16,9 @@
 <div class="section-body mt-3">
     <div class="container-fluid">
         <div class="tab-content mt-3">
+
 @if (isset($location))
+
 @include('layouts.admin.component.location.editForm')
 @else
 @include('layouts.admin.component.location.addForm')
@@ -49,6 +51,20 @@
                     swal("FAILED TO UPDATE LOCATION");
                 }
 
+            },
+            error:function(error){
+                if (err.status == 422) {
+                    var errors = err.responseJSON.errors
+                    jQuery.each(errors, (index, item) => {
+
+$('#errors').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+value+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
+
+});
+
+}
+
+
+
             }
 
 
@@ -57,14 +73,14 @@
 
     })
     $('#addLocationBtn').on('click',function(){
-
-var name = $("#name").val()
+alert('kj')
+var title = $("#title").val()
 $.ajax({
     type:"POST",
     url:"/admin/locations",
     data:{
     _token: "{{ csrf_token() }}",
-    name:name},
+    location:title},
     success:function(data)
     {
         swal({
@@ -72,6 +88,22 @@ $.ajax({
   text:  data,
 
  });
+
+    },
+    error:function(err){
+
+        if(err.status == 422){
+            var errors = err.responseJSON.errors
+            JQuery.each(errors,function(item, value){
+
+                $('#errors').fadeIn().append("<p class='alert alert-warning alert-dismissible fade show'>"+value+"<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button><p>");
+
+            })
+
+
+
+
+        }
 
     }
 

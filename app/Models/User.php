@@ -7,10 +7,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\BookingTour;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
+
+    public static function logo(){
+
+        $logos = DB::table('logos')->where('id',1)->first();
+        return $logos->logo;
+
+    }
 
     /**
      * The attributes that are mass assignable.

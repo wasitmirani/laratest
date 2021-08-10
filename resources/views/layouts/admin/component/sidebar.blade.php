@@ -1,7 +1,7 @@
 <div id="header_top" class="header_top">
     <div class="container">
     <div class="hleft">
-    <a class="header-brand" href="#"><img src="{{asset('frontend/assets/images/logo.png')}}"></img></a>
+    <a class="header-brand" href="#"><img src="{{asset('frontend/assets/images/'.App\Models\User::logo())}}"></img></a>
     <div class="dropdown">
 
     </div>

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -28,13 +29,22 @@ class AdminController extends Controller
 
 
         if ($request->hasfile('image')) {
-            $name = !empty($request->name) ? $request->name : config('app.name');
+
+            $number = mt_rand(1000000000, 9999999999);
+            $name = 'logo'.$number;
 
             $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
             $request->image->move(public_path("/frontend/assets/images/"), $name);
 
         }
-        return response()->json('Image Updated');
+
+
+       $updated  = DB::table('logos')->where('id',1)->update([
+            'logo' => $name
+        ]);
+
+
+        return response()->json($updated);
 
 
 
@@ -45,7 +55,7 @@ class AdminController extends Controller
     public function updatePassword(Request $request){
 
         $validate = $request->validate([
-            'password' => 'confirmed'
+            'password' => 'required|confirmed'
         ]);
 
         $id = Auth::user()->id;

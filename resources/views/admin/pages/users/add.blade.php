@@ -66,7 +66,11 @@ $("#addUserForm").on('submit',function(e){
                 if (err.status == 422) { // when status code is 422, it's a validation issue
 
             console.log(err.responseJSON.errors)
-            $('#errors').fadeIn().append("<p class='alert alert-danger'>"+err.responseJSON.message+"<p>");
+            jQuery.each(err.responseJSON.errors,function(item, value){
+                $('#errors').fadeIn().append("<p class='alert alert-danger'>"+value+"<p>");
+
+            })
+
                 }
             }
 

@@ -65,6 +65,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         Route::get('/update/password',[AdminController::class,'updatePasswordForm'])->name('update.password.form');
         Route::post('/update/password',[AdminController::class,'updatePassword'])->name('update.password');
         Route::post('/update/profile',[AdminController::class, 'updateProfile'])->name('update.profile');
+        Route::post('/update/logo',[AdminController::class,'updateLogo'])->name('update.logo');
 
 
         //USERS
