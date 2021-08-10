@@ -25,9 +25,9 @@
                                     <div class="col-lg-3"   style="padding-top: 10px;">
                                         <div class="img-box">
                                             <img src="{{asset('frontend/assets/images/travel-3.jpg')}}" class="img-fluid" alt="">
-                                            <h3>{{$result->tour->name}}</h3>
+                                            <h3>{{$result->package->name}}</h3>
                                             <div class="overlay">
-                                                <a href="{{route('book.now',$result->tour->id)}}" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
+                                                <a href="{{route('book.now',$result->package->id)}}" class="btn btn-business">Book now <i class="fas fa-arrow-right ml-3"></i></a>
 
                                             </div>
                                         </div>

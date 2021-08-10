@@ -99,7 +99,7 @@ class BookingsController extends Controller
     }
 
     public function updateBookingStatus(Request $request){
-
+dd($request->all());
        $id = $request->id;
       $status = $request->status;
 

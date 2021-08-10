@@ -28,12 +28,15 @@ Auth::routes();
 Route::get('/',[FrontEndController::class,'index'])->name('index');
 Route::get('/about-us',[FrontEndController::class,'aboutUs'])->name('about');
 Route::get('/packages',[FrontEndController::class,'packages'])->name('packages');
-Route::get('/book/{id}',[FrontEndController::class,'bookNow'])->name('book.now');
-Route::post('/book',[FrontEndController::class,'booking'])->name('book');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/book/{id}',[FrontEndController::class,'bookNow'])->name('book.now');
+    Route::post('/book',[FrontEndController::class,'booking'])->name('book');
+});
+
 // Route::get('/package/detail/{id}',[FrontEndController::class,'packageDetail'])->name('package.detail');
 
 Route::get('/contactus',[FrontEndController::class,'contactus'])->name('contactus');
- Route::get('/package/detail/{id}',[FrontEndController::class,'packageDetail'])->name('package.detail');
+Route::get('/package/detail/{id}',[FrontEndController::class,'packageDetail'])->name('package.detail');
 Route::post('/contactus',[FrontEndController::class,'sendMessage'])->name('send.message');
 Route::get('/all/packages',[TourPackageController::class,'index'])->name('all.packages');
 Route::get('/all/tours',[TourController::class,'index'])->name('all.tours');

@@ -184,10 +184,11 @@ class FrontEndController extends Controller
         $start = $request->start;
         $end = $request->end;
 
-        $results = BookingTour::with('tour')->with('package')->where(['location_id'=>$location])
+        $results = BookingTour::with('tour')->where(['location_id'=>$location])
                       ->orwhere(['start_booking_date'=>$start])
                       ->orwhere(['end_booking_date' => $end])
                       ->get();
+
         if(!empty($results)){
 
             return view('frontend.pages.search',compact('results'));

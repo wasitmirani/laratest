@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\BookingTour;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Location;
 
 class Tour extends Model
 {
@@ -17,6 +18,10 @@ class Tour extends Model
      */
 public function tourDetails(){
         return  $this->hasOne(TourPackage::class,'tour_id','id');
+    }
+
+    public function location(){
+        return $this->hasMany(Location::class);
     }
 
 
