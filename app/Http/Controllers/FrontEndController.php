@@ -22,11 +22,11 @@ class FrontEndController extends Controller
     {
 
 
-        $tours=  BookingTour::with('user')->with('location')->with('package')->where([['booking_date','<=',now()],['booking_status','=',3]])->get();
-
+        $tours=  BookingTour::with('user')->with('location')->with('tour')->with('package')->where([['booking_date','<=',now()],['booking_status','=',3]])->get();
+        $alltours = Tour::all();
         $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
         $locations  = Location::all();
-        return view('frontend.pages.index',compact('tours','packages', 'locations'));
+        return view('frontend.pages.index',compact('tours','packages', 'locations','alltours'));
     }
 
     public function bookNow($id){
@@ -179,6 +179,7 @@ class FrontEndController extends Controller
     }
 
     public function searchPlaces(Request $request){
+
         $location = $request->location;
         $start = $request->start;
         $end = $request->end;
@@ -187,9 +188,16 @@ class FrontEndController extends Controller
                       ->orwhere(['start_booking_date'=>$start])
                       ->orwhere(['end_booking_date' => $end])
                       ->get();
+        if(!empty($results)){
+
+            return view('frontend.pages.search',compact('results'));
+        }else{
+            return view('frontend.pages.search');
+
+        }
 
 
-        return view('frontend.pages.search',compact('results'));
+
 
 
     }

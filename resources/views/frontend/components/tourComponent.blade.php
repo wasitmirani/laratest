@@ -2,22 +2,25 @@
     <div class="content">
         <div class="container">
             <div class="row">
+                @foreach($tours as $tour)
                 <div class="col-lg-4">
                     <a class="card" href="{{ route('tour.detail') }}">
                         <div class="front" style="background-image: url(assets/images/travel-1.jpg)">
-                            <h3>Condo 1</h3>
+                            <h3>{{ $tour->tour->name }}</h3>
                         </div>
                         <div class="back">
                             <div>
                                 <h2 class="heading-two">Travel
                                 Best Holidays Trips
                                 In The World</h2>
-                                <p class="para-one">3 Bedroom, 2 Bath Ocean and Mountain View
-</p>
+                                <p class="para-one">3 Bedroom, 2 Bath Ocean and Mountain View</p>
+
                             </div>
-                        </div></a>
-                    </div>
-                    <div class="col-lg-4">
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+                <div class="col-lg-4">
                         <a class="card" href="{{ route('tour.detail') }}">
                             <div class="front" style="background-image: url(assets/images/travel-2.jpg)">
                                 <h3>Condo 2</h3>
@@ -30,8 +33,8 @@
                                     <p class="para-one">3 bedroom, 2 bath And Garden view</p>
                                 </div>
                             </div></a>
-                        </div>
-                        <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4">
                             <a class="card" href="{{ route('tour.detail') }}">
                                 <div class="front" style="background-image: url(assets/images/travel-1.jpg)">
                                     <h3>Condo 3</h3>
@@ -44,7 +47,7 @@
                                         <p class="para-one">1 bedroom, 2 bath ,Oceanfront And Ocean View</p>
                                     </div>
                                 </div></a>
-                            </div>
+                </div>
 
                             <div class="col-lg-12">
                             <a class="card" href="#!">

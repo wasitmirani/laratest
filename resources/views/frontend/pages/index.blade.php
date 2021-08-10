@@ -86,6 +86,31 @@
             @component('frontend.components.aboutComponent')
 
             @endcomponent
+            <section class="main-flips" style="background: url(frontend/assets/images/travel-bg.jpg)no-repeat;">
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            @if($alltours)
+                            @foreach($alltours as $tour)
+                            <div class="col-lg-4">
+                                <a class="card" href="{{ route('tour.detail') }}">
+                                    <div class="front" style="background-image: url(frontend/assets/images/travel-1.jpg)">
+                                        <h3>{{ $tour->name }}</h3>
+                                    </div>
+                                    <div class="back">
+                                        <div>
+                                            <h2 class="heading-two">{{ $tour->description}}</h2>
+                                            <p class="para-one"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            @endforeach
+                            @endif
+
+                            </div>
+            </section>
+
 
 
 
