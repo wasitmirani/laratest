@@ -21,7 +21,9 @@
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
 		<link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
 		<title>{{config('app.name')}}</title>
+        @yield('style')
 	</head>
+
 	<body>
 		<!-- Header -->
 		<header data-aos="flip-down" data-aos-duration="2000">

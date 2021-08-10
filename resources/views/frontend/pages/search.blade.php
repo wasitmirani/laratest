@@ -35,7 +35,7 @@
                                     @empty
                                     <div class="row justify-content-center">
                                         <div class="col-md-8">
-                                        <h4>Sorry we not found tours please try agin</h4>
+                                        <h4>Sorry we don't found your desired search</h4>
                                         <div class="col-md-4">
                                             <a href="{{url('/')}}" class="btn btn-business btn-sm btn-success">Back Home <i class="fas fa-arrow-right ml-3"></i></a>
                                         </div>

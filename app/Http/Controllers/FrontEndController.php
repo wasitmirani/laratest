@@ -20,8 +20,6 @@ class FrontEndController extends Controller
      */
     public function index()
     {
-
-
         $tours=  BookingTour::with('user')->with('location')->with('tour')->with('package')->where([['booking_date','<=',now()],['booking_status','=',3]])->get();
         $alltours = Tour::all();
         $packages = Package::with('locations')->orderby('id','desc')->paginate(6);
@@ -73,6 +71,7 @@ class FrontEndController extends Controller
 
 
     public function packageDetail($id){
+
        $package = Package::with('tourPackages')->where('id',$id)->first();
 
 
