@@ -62,12 +62,13 @@ class UserController extends Controller
     }
     public function edit($id){
 
+     $user = User::find($id);
+
+     return view('admin.pages.users.add',compact('user'));
 
 
     }
     public function update(Request $request, $id){
-
-
 
         $user = User::where('id',$id)->first();
         $validate = $request->validate([
@@ -105,10 +106,6 @@ class UserController extends Controller
         }else{
             return response()->json("0");
         }
-
-
-
-
     }
     public function delete($id){
 

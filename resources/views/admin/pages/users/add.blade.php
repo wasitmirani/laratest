@@ -20,6 +20,7 @@
 
             @include('layouts.admin.component.user.form')
 
+
         </div>
     </div>
 </div>
@@ -79,9 +80,10 @@ $("#addUserForm").on('submit',function(e){
     $("#editUserForm").on('submit',function(e){
         e.preventDefault()
 
-        var data = [];
+        // var data = [];
         //  var id = $(this).data('id');
-          var id = $("#id").val();
+          var id = $(this).data('id');
+alert(id)
         // var name = $("#name").val();
         // var email = $("#email").val();
         // var password = $("#password").val();
