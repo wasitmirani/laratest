@@ -5,7 +5,7 @@
         <ul class="list-group list-unstyled">
         <li class="list-group-item mb-2">
         <p>Default Theme</p>
-        <a href="../main/index.html"><img src=".{{asset('assets/images/themes/default.png')}}" class="img-fluid"></a>
+        <a href="../main/index.html"><img src="{{asset('assets/images/themes/default.png')}}" class="img-fluid"></a>
         </li>
         <li class="list-group-item mb-2">
         <p>Night Mode Theme</p>
@@ -25,7 +25,7 @@
         </li>
         <li class="list-group-item mb-2">
         <p>Theme Version4</p>
-         <a href="../theme4/index.html"><img src=".{{asset('assets/images/themes/theme4.png')}}" class="img-fluid"></a>
+         <a href="../theme4/index.html"><img src="{{asset('assets/images/themes/theme4.png')}}" class="img-fluid"></a>
         </li>
         <li class="list-group-item mb-2">
         <p>Horizontal Version</p>
@@ -40,7 +40,7 @@
             <div class="card">
             <div class="card-body">
             <div class="media">
-            <img class="avatar avatar-xl mr-3" src=".{{asset('assets/images/sm/avatar1.jpg')}}" alt="avatar">
+            <img class="avatar avatar-xl mr-3" src="{{asset('assets/images/sm/avatar1.jpg')}}" alt="avatar">
             <div class="media-body">
             <h5 class="m-0">Sara Hopkins</h5>
             <p class="text-muted mb-0">Webdeveloper</p>
@@ -108,7 +108,7 @@
             <li class="online">
             <a href="javascript:void(0);">
             <div class="media">
-            <img class="media-object " src=".{{asset('assets/images/xs/avatar4.jpg')}}" alt="">
+            <img class="media-object " src="{{asset('assets/images/xs/avatar4.jpg')}}" alt="">
             <div class="media-body">
             <span class="name">Donald Gardner</span>
             <span class="message">Designer, Blogger</span>
@@ -120,7 +120,7 @@
             <li class="online">
             <a href="javascript:void(0);">
             <div class="media">
-            <img class="media-object " src=".{{asset('assets/images/xs/avatar5.jpg')}}" alt="">
+            <img class="media-object " src="{{asset('assets/images/xs/avatar5.jpg')}}" alt="">
             <div class="media-body">
             <span class="name">Wendy Keen</span>
             <span class="message">Java Developer</span>
@@ -132,7 +132,7 @@
             <li class="offline">
             <a href="javascript:void(0);">
             <div class="media">
-            <img class="media-object " src=".{{asset('assets/images/xs/avatar2.jpg')}}" alt="">
+            <img class="media-object " src="{{asset('assets/images/xs/avatar2.jpg')}}" alt="">
             <div class="media-body">
             <span class="name">Matt Rosales</span>
             <span class="message">CEO, Epic Theme</span>

@@ -49,26 +49,12 @@
 </li>
 <li>
 
-      <a class="has-arrow arrow-c" href="{{ route('logout') }}" onclick="event.preventDefault();
-      document.getElementById('logout-form').submit();"><i class="dropdown-icon fe fe-log-out"></i> Sign out</a>
-
-
+      <a class="has-arrow arrow-c" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="dropdown-icon fe fe-log-out"></i> Sign out</a>
       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
           @csrf
       </form>
 
 </li>
-
-
-
-
-
-
-
-
-
-
-
-    </ul>
+</ul>
     </nav>
     </div>

@@ -13,12 +13,12 @@
     </div>
     </div>
     </div>
-<div id="rightsidebar" class="right_sidebar">
-    <a href="javascript:void(0)" class="p-3 settingbar float-right"><i class="fa fa-close"></i></a>
-    <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Settings" aria-expanded="true">Settings</a></li>
-    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#activity" aria-expanded="false">Activity</a></li>
-    </ul>
+    <div id="rightsidebar" class="right_sidebar">
+      <a href="javascript:void(0)" class="p-3 settingbar float-right"><i class="fa fa-close"></i></a>
+       <ul class="nav nav-tabs" role="tablist">
+         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Settings" aria-expanded="true">Settings</a></li>
+         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#activity" aria-expanded="false">Activity</a></li>
+       </ul>
     <div class="tab-content">
     <div role="tabpanel" class="tab-pane vivify fadeIn active" id="Settings" aria-expanded="true">
     <div class="mb-4">

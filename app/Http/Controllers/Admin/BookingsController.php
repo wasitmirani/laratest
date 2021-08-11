@@ -82,7 +82,7 @@ class BookingsController extends Controller
 
     public function updateBookingStatus(Request $request){
 
-       $id = $request->id;
+      $id = $request->id;
       $status = $request->status;
 
       $updated =  BookingTour::where('id',$id)->update(['booking_status'=>$status]);
