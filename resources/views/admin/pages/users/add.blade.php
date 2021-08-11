@@ -83,7 +83,7 @@ $("#addUserForm").on('submit',function(e){
         // var data = [];
         //  var id = $(this).data('id');
           var id = $(this).data('id');
-alert(id)
+
         // var name = $("#name").val();
         // var email = $("#email").val();
         // var password = $("#password").val();

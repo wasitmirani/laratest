@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -23,7 +24,42 @@ class UserController extends Controller
 
 
 
+
     }
+    public function store(Request $request){
+
+
+
+                $user = new User;
+                $validate = $request->validate([
+                    'name' => ['required', 'string', 'max:255'],
+                    'email' => ['required', 'string', 'email', 'max:255','unique:users'],
+                    'password' => ['required','confirmed'],
+                ]);
+               $name = "";
+                if ($request->hasfile('image')) {
+                    $name = !empty($request->name) ? $request->name : config('app.name');
+
+                    $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
+                    $request->image->move(public_path("/admin/img/users/"), $name);
+                    $user->image = $name;
+                }else{
+                    $name = "dummyuser.jpg";
+                }
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = Hash::make($request->password);
+                $user->image = $name;
+
+
+                $created = $user->save();
+                if($created){
+                    return response()->json($created);
+                }else{
+                    return response()->json("0");
+                }
+
+                }
 
     public function edit($id){
 
