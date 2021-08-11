@@ -18,7 +18,7 @@
                             <tr>
 
                                 <th><strong>Package</strong></th>
-                                <th><strong>Description</strong></th>
+
                                 <th><strong>Location</strong></th>
                                 <th><strong>Start Date</strong></th>
                                 <th><strong>End Date</strong></th>
@@ -32,7 +32,7 @@
                             <tr>
 
                                 <td>{{$tour->package->name}}</td>
-                                <td>{{$tour->package->escription}}</td>
+
                                 <td>{{$tour->location->name}}</td>
                                 <td>{{$tour->booking_start_date}}</td>
                                 <td>{{$tour->booking_end_date}}</td>

@@ -28,7 +28,7 @@ class MemberController extends Controller
         // $dt->modify( '+10 days' );
         // $to = $dt->format( 'dS M, Y (D)' );
 
-        $up_commings = BookingTour::with('user')->with('location')->with('package')->where([['booking_date','<=',now()],['user_id','=',$id],['booking_status','=',2]])->get();
+        $up_commings = BookingTour::with('user')->with('tour')->with('location')->with('package')->where([['booking_date','<=',now()],['user_id','=',$id],['booking_status','=',2]])->get();
 
         $total_bookings = BookingTour::where('user_id',$id)->count();
         $total_pending = BookingTour::where([['user_id','=',$id],['booking_status','=',1]])->count();

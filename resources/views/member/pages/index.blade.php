@@ -29,7 +29,7 @@
                     <div class="card-body p-4">
                         <div class="media ai-icon">
                             <span class="mr-3 bgl-primary text-primary">
-                             <i class="	fa fa-map-marker"></i> 
+                             <i class="	fa fa-map-marker"></i>
 
                             </span>
                             <div class="media-body">
@@ -131,11 +131,11 @@
                                                 @foreach($up_commings as $upcomming)
                                     <tr>
 
-                                        <td>{{$upcomming->tour->name}}</td>
-                                        <td>{{$upcomming->tour->description}}</td>
+                                        <td>{{$upcomming->location->name}}</td>
+                                        <td>{{$upcomming->package->name}}</td>
                                         <td>{{$upcomming->booking_date}}</td>
                                         <td>
-                                        @if ($upcomming->booking_status == 1)
+                                        @if ($upcomming->booking_status == 2)
                                         <span class="badge light badge-warning">Pending</span>
                                         @else
                                         <span class="badge light badge-success">Approved</span>
