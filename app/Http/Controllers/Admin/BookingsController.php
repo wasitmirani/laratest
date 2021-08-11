@@ -43,13 +43,9 @@ class BookingsController extends Controller
         }
     }
     public function edit($id){
-
         $booking = BookingTour::with('location')->where('id',$id)->first();
         $locations = Location::all();
         return view('admin.pages.bookings.add',['booking'=>$booking,'locations'=>$locations]);
-
-
-
     }
     public function update(Request $request, $id){
 

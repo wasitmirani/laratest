@@ -69,9 +69,9 @@
                   <li>
 
                     <ul>
-                    <li><a type="button" class="btn -btn-primary update_status" data-id="{{$booking->id}}" data-status="2">Approve</a></li>
-                    <li><a type="button" class="btn -btn-warnign update_status"  data-id="{{$booking->id}}" data-status="1">Pending</a></li>
-                    <li><a type="button" class="btn btn-danger update_status" data-id="{{$booking->id}}" data-status="3">Reject</a></li>
+                    <li><a type="button" class="update_status" data-id="{{$booking->id}}" data-status="2">Approve</a></li>
+                    <li><a type="button" class="update_status"  data-id="{{$booking->id}}" data-status="1">Pending</a></li>
+                    <li><a type="button" class="update_status" data-id="{{$booking->id}}" data-status="3">Reject</a></li>
 
                     </ul>
                     </li>
