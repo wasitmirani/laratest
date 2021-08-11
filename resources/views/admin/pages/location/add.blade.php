@@ -75,19 +75,16 @@ $('#errors').fadeIn().append("<p class='alert alert-warning alert-dismissible fa
     $('#addLocationBtn').on('click',function(){
 alert('kj')
 var title = $("#title").val()
-$.ajax({
-    type:"POST",
-    url:"/admin/locations",
-    data:{
+  $.ajax({
+      type:"POST",
+      url:"/admin/locations",
+      data:{
     _token: "{{ csrf_token() }}",
-    location:title},
+    location:title
+    },
     success:function(data)
     {
-        swal({
-  title: "",
-  text:  data,
-
- });
+        swal({title: "",text:  data,});
 
     },
     error:function(err){
