@@ -13,8 +13,6 @@ class BookingsController extends Controller
     public function index(){
 
         $bookings = BookingTour::with('user')->with('location')->orderby('id','desc')->get();
-
-
         return view('admin.pages.bookings.bookings',['bookings'=>$bookings]);
 
     }
@@ -22,9 +20,6 @@ class BookingsController extends Controller
     public function create(){
         $locations = Location::all();
         return view('admin.pages.bookings.add',['locations'=>$locations]);
-
-
-
     }
     public function store(Request $request){
 
@@ -46,12 +41,6 @@ class BookingsController extends Controller
         }else{
             return response()->json('0');
         }
-
-
-
-
-
-
     }
     public function edit($id){
 
@@ -64,10 +53,7 @@ class BookingsController extends Controller
     }
     public function update(Request $request, $id){
 
-
         $booking = BookingTour::where('id',$id)->first();
-
-
         $booking->location_id = $request->location;
         $booking->booking_date = $request->booking_date;
         $booking->start_booking_date = $request->start_date;

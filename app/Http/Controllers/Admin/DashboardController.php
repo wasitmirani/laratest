@@ -17,9 +17,7 @@ class DashboardController extends Controller
         $latestBookings = BookingTour::with('location')->with('user')->latest()->get();
         $totalBooking = count(BookingTour::all());
         $totalLocation = count(Location::all());
-
-       $upcomingTours =  BookingTour::where('booking_date','>=',now())->count();
-
+        $upcomingTours =  BookingTour::where('booking_date','>=',now())->count();
         $data['totalUser'] = $totalUser;
         $data['latestBookings'] = $latestBookings;
         return view('admin.pages.dashboard',compact('data','totalBooking','totalLocation','upcomingTours'));
