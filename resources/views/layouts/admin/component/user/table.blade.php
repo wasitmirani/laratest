@@ -42,7 +42,7 @@
 <tr>
 <td class="width45">
     @if ($user->image == null)
-    <img src="{{asset('assets/images/sm/avatar1.jpg')}}" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
+    <img src="{{asset('assets/images/sm/avatar1.jpg')}}" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar image-thumbnail" data-original-title="Avatar Name">
     @else
     <img src="{{asset('admin/img/users/'.$user->image)}}" data-toggle="tooltip" data-placement="top" title="" alt="Avatar" class="avatar" data-original-title="Avatar Name">
     @endif

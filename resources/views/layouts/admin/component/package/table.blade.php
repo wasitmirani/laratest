@@ -51,7 +51,7 @@
     @else
     <td>-</td>
     @endif
-    <td><img style="width: 40px; height:40px;" src="{{asset('/admin/img/package/'.$package->thumbnail)}}"></td>
+    <td><img style="width: 40px; height:40px;" class="img-thumbnail" src="{{asset('/admin/img/package/'.$package->thumbnail)}}"></td>
     <td>
         <a href="{{route('admin.packages.edit',$package->id)}}" class="btn btn-icon" title="Edit"  ><i class="fa fa-edit"></i></a>
         <button type="button"  class="btn btn-icon dltPackageBtn js-sweetalert" data-id="{{$package->id}}""  title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></utton>
