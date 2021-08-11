@@ -58,7 +58,7 @@ Route::middleware(['auth'])->prefix('member')->name('member.')->group(function (
         Route::post('/update/profile',[MemberController::class,'updateProfile'])->name('update.profile');
 
 });
-Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+  Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
         Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
         Route::get('/profile',[AdminController::class,'profile'])->name('profile');
@@ -71,14 +71,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
         //USERS
         Route::get('/users',[App\Http\Controllers\Admin\UserController::class,'index'])->name('users');
         Route::get('/users/create',[App\Http\Controllers\Admin\UserController::class,'create'])->name('users.create');
-
         Route::post('/users',[App\Http\Controllers\Admin\UserController::class,'store'])->name('users.store');
         Route::post('/users/delete/{id}',[App\Http\Controllers\Admin\UserController::class,'delete'])->name('user.delete');
-
-
         Route::post('/update/users/role',[App\Http\Controllers\Admin\UserController::class,'updateUserRole'])->name('update.user.role');
-
-        Route::post('/users/delete/{id}',[App\Http\Controllers\Admin\UserController::class,'index'])->name('user.delete');
         Route::get('/users/edit/{id}',[App\Http\Controllers\Admin\UserController::class,'edit'])->name('user.edit');
         Route::post('/users/update/{id}',[App\Http\Controllers\Admin\UserController::class,'update'])->name('user.update');
 
