@@ -11,7 +11,7 @@ class Location extends Model
     use HasFactory;
 
 
-    // public function package(){
-    //     return $this->belongsTo(Package::class,'location_id','id');
-    // }
+    public function package(){
+        return $this->belongsTo(Package::class,'location_id','id');
+    }
 }

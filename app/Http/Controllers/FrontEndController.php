@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Tour;
 use App\Models\Contact;
 use App\Models\Package;
@@ -47,21 +48,16 @@ class FrontEndController extends Controller
                 'tour_id' => $request->tour,
                 'start_booking_date' => $request->start_date,
                 'end_booking_date' => $request->end_date,
-                'booking_date' =>$request->booking_date,
+                'booking_date' => $request->booking_date,
                 'user_id' => Auth::user()->id,
                 'location_id' => $request->location_id
-
             ]);
 
             if($created){
-
                 return redirect()->back()->with('message','Your Booking Detail Submited Successfully');
-
             }else{
                 return redirect()->back()->with('message','Failed To Submit Booking Detail');
             }
-
-
 
         }
 
