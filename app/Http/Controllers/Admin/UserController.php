@@ -24,42 +24,7 @@ class UserController extends Controller
 
 
     }
-    public function store(Request $request){
 
-
-
-        $user = new User;
-        $validate = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255','unique:users'],
-            'password' => ['confirmed'],
-        ]);
-
-        if ($request->hasfile('image')) {
-            $name = !empty($request->name) ? $request->name : config('app.name');
-
-            $name = Str::slug($name, '-')  . "-" . time() . '.' . $request->image->extension();
-            $request->image->move(public_path("/admin/img/users/"), $name);
-            $user->image = $name;
-        }
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->image = $request->$name;
-
-
-        $created = $user->save();
-        if($created){
-            return response()->json($created);
-        }else{
-            return response()->json();
-        }
-
-
-
-
-
-    }
     public function edit($id){
 
      $user = User::find($id);
@@ -71,12 +36,6 @@ class UserController extends Controller
     public function update(Request $request, $id){
 
         $user = User::where('id',$id)->first();
-        $validate = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'password' => ['confirmed'],
-        ]);
-
 
         if ($request->hasfile('image')) {
             $name = !empty($request->name) ? $request->name : config('app.name');
