@@ -9,7 +9,7 @@
                 <h2 class="heading-one">Explore Your Life Travel <br>
                 Where You Want</h2>
                 <p>Discover amzaing places at exclusive deals</p>
-                <a href="#" class="btn btn-business">Discover <i class="fas fa-arrow-right ml-3"></i></a>
+                <a href="{{route('packages')}}" class="btn btn-business">Discover <i class="fas fa-arrow-right ml-3"></i></a>
             </div>
         </div>
     </div>

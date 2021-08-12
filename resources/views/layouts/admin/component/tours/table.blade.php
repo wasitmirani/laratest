@@ -81,8 +81,8 @@
 
        </td>
     <td>
-        @if (isset($tour->locations->name))
-        {{$tour->locations->name}}
+        @if (isset($tour->location->name))
+        {{$tour->location->name}}
         @endif
 
     </td>
@@ -131,8 +131,8 @@
 
        </td>
     <td>
-        @if (isset($upcomingTour->locations->name))
-        {{$upcomingTour->locations->name}}
+        @if (isset($upcomingTour->location->name))
+        {{$upcomingTour->location->name}}
         @endif
 
     </td>

@@ -53,3 +53,6 @@ class ToursController extends Controller
         return view('admin.pages.tours.tours',compact('upcomingTours'));
     }
 }
+
+
+
