@@ -51,6 +51,12 @@ class FrontEndController extends Controller
             'location_id' =>  'required'
         ]);
 
+        if($request->end_date < now() || $request->start_date < now()){
+
+            return back()->with('message','Please Enter Valid Start And End Date');
+
+        }
+
 
             $created = BookingTour::create([
                 'package_id' => $request->package,

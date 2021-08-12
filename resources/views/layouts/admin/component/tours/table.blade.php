@@ -21,6 +21,8 @@
 
     <th>Package</th>
     <th>Booking Date</th>
+    <th>Start Date</th>
+    <th>End Date</th>
     <th>Location</th>
 
     </tr>
@@ -31,6 +33,9 @@
 
             <th>Package</th>
             <th>Booking Date</th>
+
+            <th>Start Date</th>
+            <th>End Date</th>
             <th>Location</th>
 
             </tr>
@@ -60,6 +65,18 @@
     <td>
         @if (isset($tour->booking_date))
         {{$tour->booking_date}}
+        @endif
+
+       </td>
+       <td>
+        @if (isset($tour->start_booking_date))
+        {{$tour->start_booking_date}}
+        @endif
+
+       </td>
+       <td>
+        @if (isset($tour->end_booking_date))
+        {{$tour->end_booking_date}}
         @endif
 
        </td>
@@ -98,6 +115,18 @@
     <td>
         @if (isset($upcomingTour->booking_date))
         {{$upcomingTour->booking_date}}
+        @endif
+
+       </td>
+       <td>
+        @if (isset($upcomingTour->start_booking_date))
+        {{$upcomingTour->start_booking_date}}
+        @endif
+
+       </td>
+       <td>
+        @if (isset($upcomingTour->end_booking_date))
+        {{$upcomingTour->end_booking_date}}
         @endif
 
        </td>
