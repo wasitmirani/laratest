@@ -42,6 +42,15 @@ class FrontEndController extends Controller
 
     public function booking(Request $request){
 
+        $validate = $request->validate([
+            'package' => 'required',
+
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'booking_date' => 'required',
+            'location_id' =>  'required'
+        ]);
+
 
             $created = BookingTour::create([
                 'package_id' => $request->package,

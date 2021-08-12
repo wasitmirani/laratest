@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-lg-12">
                             <select class="form-control" name="location_id">
-                                <option>Select Location</option>
+                                <option value="">Select Location</option>
                                 @foreach ($locations as $location)
                                 <option value="{{$location->id}}">{{$location->name}}</option>
                                 @endforeach

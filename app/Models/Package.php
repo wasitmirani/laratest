@@ -14,6 +14,6 @@ class Package extends Model
     }
 
     public function locations(){
-        return $this->hasMany(Location::class,'location_id','id');
+        return $this->belongsTo(Location::class,'location_id','id');
     }
 }

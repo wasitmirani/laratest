@@ -20,9 +20,9 @@ public function tourDetails(){
         return  $this->hasOne(TourPackage::class,'tour_id','id');
     }
 
-    public function location(){
-        return $this->hasMany(Location::class);
-    }
+    // public function location(){
+    //     return $this->hasMany(Location::class);
+    // }
 
 
 
