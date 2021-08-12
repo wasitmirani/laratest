@@ -50,7 +50,7 @@
                         </div>
                           <div class="col-12 text-center mt-3">
                             <a class="btn" href="{{route('register')}}">Register New Account </a>
-                            <a class="btn" href="#">Or Continue With <img src="{{asset('/frontend/assets/images/google.png')}}" class="img-fluid ml-2"></a>
+                            <a class="btn" href="{{route('password.request')}}">Or Forgot Password <img src="" class="img-fluid ml-2"></a>
                         </div>
                     </div>
                 </form>

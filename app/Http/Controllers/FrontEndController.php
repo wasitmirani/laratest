@@ -191,14 +191,18 @@ class FrontEndController extends Controller
 
     public function searchPlaces(Request $request){
 
+
+
         $location = $request->location;
         $start = $request->start;
         $end = $request->end;
 
-        $results = BookingTour::with('tour')->where(['location_id'=>$location])
-                      ->orwhere(['start_booking_date'=>$start])
-                      ->orwhere(['end_booking_date' => $end])
+        $results = BookingTour::with('tour')->where('location_id','like',"%{$location}%")
+                      ->orwhere('start_booking_date','like',"%{$start}%")
+                      ->orwhere('end_booking_date' ,'like',"%{$end}%")
+
                       ->get();
+
 
         if(!empty($results)){
 
@@ -224,7 +228,7 @@ class FrontEndController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 
 
