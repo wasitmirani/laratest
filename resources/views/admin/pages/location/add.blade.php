@@ -73,7 +73,7 @@ $('#errors').fadeIn().append("<p class='alert alert-warning alert-dismissible fa
 
     })
     $('#addLocationBtn').on('click',function(){
-alert('kj')
+
 var title = $("#title").val()
   $.ajax({
       type:"POST",
