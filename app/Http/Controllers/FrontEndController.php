@@ -60,6 +60,7 @@ class FrontEndController extends Controller
 
             $created = BookingTour::create([
                 'package_id' => $request->package,
+
                 'tour_id' => $request->tour,
                 'start_booking_date' => $request->start_date,
                 'end_booking_date' => $request->end_date,

@@ -30,7 +30,7 @@
                 {{ csrf_field() }}
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" name="name" class="form-control" placeholder="Name">
+                            <input type="text" name="price" class="form-control" placeholder="Price" value="$ {{ $pack->price }}">
                         </div>
                         <div class="col-lg-6">
                           <select class="form-control" name="package">
@@ -61,7 +61,9 @@
                             <select class="form-control" name="location_id">
                                 <option value="">Select Location</option>
                                 @foreach ($locations as $location)
-                                <option value="{{$location->id}}">{{$location->name}}</option>
+                                <option value="{{$location->id}}" @if ($location->id == $package->location_id)
+                                    selected
+                                  @endif>{{$location->name}}</option>
                                 @endforeach
 
 
