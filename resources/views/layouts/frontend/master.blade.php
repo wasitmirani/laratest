@@ -19,6 +19,8 @@
 		<link rel="stylesheet" href="{{asset('frontend/assets/css/slick.min.css')}}">
 		<link rel="stylesheet" href="{{asset('frontend/assets/css/slick-theme.css')}}">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link href="{{ asset('assets/listing/css/style.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('/assets/listing/css/style.css') }}">
 		<link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
 		<title>{{config('app.name')}}</title>
         @yield('style')
@@ -101,6 +103,14 @@
 					<script src="{{asset('frontend/assets/js/slick.min.js')}}"></script>
 					<script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
                     <script src="{{asset('css/app.css')}}"></script>
+                    <script src="{{ asset('assets/lisiting/js/jqBootstrapValidation.js') }}" ></script>
+                    <script src="{{ asset('assets/lisiting/js/contact_me.js') }}" ></script>
+                    <script src="{{ asset('assets/listing/js/contact_me.js') }}" ></script>
+                    <script src="{{ asset('assets/listing/vendor/slick-master/slick/slick.js') }}" type="0235daaa3cbbf0569a742656-text/javascript" charset="utf-8"></script>
+                    <script src="{{ asset('assets/listing/vendor/lightgallery-master/dist/js/lightgallery-all.min.j') }}" type="0235daaa3cbbf0569a742656-text/javascript"></script>
+                    <script src="{{ asset('assets/listing/vendor/select2/js/select2.min.js') }}" type="0235daaa3cbbf0569a742656-text/javascript"></script>
+                    <script src="{{ asset('assets/listing/js/custom.js') }}" type="0235daaa3cbbf0569a742656-text/javascript"></script>
+                    <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="0235daaa3cbbf0569a742656-|49" defer=""></script><script defer="" src="../../beacon.min.js" data-cf-beacon='{"rayId":"6548b61b2f89fa98","version":"2021.5.1","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","si":10}'></script>
 					<script>
 					AOS.init();
 					</script>

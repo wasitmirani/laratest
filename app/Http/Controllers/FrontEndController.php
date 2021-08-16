@@ -228,7 +228,7 @@ class FrontEndController extends Controller
      */
     public function destroy($id)
     {
-        
+
     }
 
 
