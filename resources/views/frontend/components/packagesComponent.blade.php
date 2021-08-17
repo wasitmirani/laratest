@@ -1,8 +1,10 @@
 <section class="packages">
     <div class="container">
-        <div class="row text-center">
+    	<div class="row text-center">
             <h2 class="heading-three">Pack N Go! </h2>
             <h2 class="heading-two">Awesome Tours Packages </h2>
+            <p>Special deals for repeat clients and long-term tenants!
+                 <br>Depending upon high and low season limitations, special discounts are available.</p>
         </div>
         <div class="row">
         @foreach($packages as $package)
